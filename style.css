@@ -1,0 +1,112 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
+}
+
+.planner-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.planner-card h1 {
+    color: #333;
+}
+
+.form-control {
+    height: 48px;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons .active {
+    color: white;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.task-title {
+    word-break: break-word;
+    font-size: 16px;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.edit-input {
+    flex: 1;
+    min-width: 0;
+}
+
+#emptyMessage {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+
+    .container {
+        padding: 20px !important;
+    }
+
+    .planner-card {
+        padding: 25px 18px;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-left {
+        width: 100%;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .task-actions button {
+        flex: 1;
+    }
+}
